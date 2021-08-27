@@ -42,7 +42,7 @@ Jekyll이 사용하는 템플릿 언어
   - ```{{ "hi" | capitalize }}```
 ### Front Matter
 문서의 상단에 있는 두 개의 --- 사이에 들어가는 YAML 조각
-- ```
+- ```Liquid
   ---
   # Front Matter
   my_number: 5
@@ -174,4 +174,5 @@ Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하
   - bundle update
   - bundle add webrick
   - bundle exec jekyll serve
-
+### 수정
+- 기본 화면 완성
