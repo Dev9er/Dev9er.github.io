@@ -163,14 +163,14 @@ Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하
 - [GitHub Page Source](https://Dev9er.github.io)
   - main branch 사용
 - [Target GitHub Page](https://Dev9er.github.io/gh-pages)
-## 설치
+### 설치
 - git submodule 사용
 - git submodule add https://github.com/tomjoht/documentation-theme-jekyll __document-theme-jekyll
 - 작업 시, Submodule 포함 clone 방법
   - git clone --recurse-submodules https://github.com/Dev9er/Dev9er.github.io
   - Submodule Update
     - git submodule update --remote
-- Compile
+- __document-theme-jekyll 파일 복사 후, Compile
   - bundle update
   - bundle add webrick
   - bundle exec jekyll serve
