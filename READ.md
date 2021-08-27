@@ -156,4 +156,22 @@ Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하
   - JEKYLL_ENV=production bundle exec jekyll build
   - 이후 _site 디렉토리의 콘텐츠를 복사해 서버로 제공한다.
     - [Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/)
-    
+
+## Jekyll Theme 사용
+- [원본 Theme](https://github.com/tomjoht/documentation-theme-jekyll)
+- Clone: __documentation-theme-jekyll
+- [GitHub Page Source](https://Dev9er.github.io)
+  - main branch 사용
+- [Target GitHub Page](https://Dev9er.github.io/gh-pages)
+## 설치
+- git submodule 사용
+- git submodule add https://github.com/tomjoht/documentation-theme-jekyll __document-theme-jekyll
+- 작업 시, Submodule 포함 clone 방법
+  - git clone --recurse-submodules https://github.com/Dev9er/Dev9er.github.io
+  - Submodule Update
+    - git submodule update --remote
+- Compile
+  - bundle update
+  - bundle add webrick
+  - bundle exec jekyll serve
+
