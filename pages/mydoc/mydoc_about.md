@@ -13,8 +13,6 @@ folder: mydoc
 - 이름: 박성배  
 - [나의 블로그](http://Dev9er.github.io)  
 - [나의 Github](http://github.com/Dev9er)  
-
-- For Test
 <hr />
 
 
