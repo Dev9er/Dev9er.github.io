@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>나의 블로그 | Software Programming</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Dev9er.github.io" href="http://Dev9er.github.io/feed.xml">
+
+
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Software Programming</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">블로그<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="news">Latest Blog</a></li>
+                        
+                        
+                        
+                        <li><a href="news_archive">Yearly Blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">카테고리<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Jekyll Documentation Theme</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">태그<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Jekyll Documentation Theme</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_about.html">About Me</a></li>
+                        
+                        
+                        
+                        <li><a href="https://github.com/Dev9er" target="_blank" rel="noopener">GitHub</a></li>
+                        
+                        
+                        
+                        <li><a href="https://idratherbewriting.com/documentation-theme-jekyll/" target="_blank" rel="noopener">Documentation Theme</a></li>
+                        
+                        
+                        
+                        <li><a href="https://github.com/tomjoht/documentation-theme-jekyll" target="_blank" rel="noopener">Documentation Theme Source</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:Dev9er@gmail.com?subject=박성배의 블로그 feedback&body=I have some feedback about the 나의 블로그 page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="나의 블로그">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+  <li>
+      <a title="Products" href="#">Products</a>
+      <ul>
+          
+          
+          
+          <li><a title="News" href="news.html">News</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Theme instructions" href="mydoc_introduction.html">Theme instructions</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Product 1" href="p1_landing_page.html">Product 1</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Product 2" href="p2_landing_page.html">Product 2</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">나의 블로그</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+
+
+    
+
+
+    
+
+    <a target="_blank" rel="noopener" href="https://github.com/Dev9er/Dev9er.github.io/blob/main/READ.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+   <h1 id="나의-블로그">나의 블로그</h1>
+<h2 id="준비">준비</h2>
+<ul>
+  <li>
+    <h3 id="ruby-설치">Ruby 설치</h3>
+    <ul>
+      <li>설치 마지막 ridk install</li>
+      <li>ruby -v</li>
+      <li>get -v</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="jekyll-설치">Jekyll 설치</h3>
+    <ul>
+      <li>gem install jekyll bundler
+        <ul>
+          <li>jekyll -v
+            <h2 id="새-jekyll-site-생성">새 Jekyll site 생성</h2>
+          </li>
+        </ul>
+      </li>
+      <li>./myFirstJekyllBlog</li>
+      <li>jekyll new myFirstJekyllBlog</li>
+      <li>cd myFirstJekyllBlog</li>
+      <li>bundle add webrick (Compile Error 제거)</li>
+      <li>bundle exec jekyll serve</li>
+      <li>http://localhost:4000 주소로 접속
+        <h2 id="pure-jekyll-site-생성">Pure Jekyll site 생성</h2>
+      </li>
+      <li>./__pureJekyllBlog</li>
+      <li>mkdir __pureJekyllBlog</li>
+      <li>cd __pureJekyllBlog</li>
+      <li>bundle init</li>
+      <li>gem “jekyll” 추가 (Gemfile 수정)</li>
+      <li>bundle add webrick (Compile Error 제거)</li>
+      <li>bundle (Gemfile.lock 생성)</li>
+      <li>index.html 생성</li>
+      <li>jekyll build (static _site 생성)</li>
+      <li>jekyll serve (local web server)</li>
+      <li>http://localhost:4000 주소로 접속
+        <h2 id="jekyll-site-수정">Jekyll site 수정</h2>
+        <p><a href="https://til.younho9.dev/docs/frontend/jekyll/jekyll-github-page%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EA%B0%9C%EC%9D%B8%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0">참고 Site</a></p>
+        <h3 id="liquid">Liquid</h3>
+        <p>Jekyll이 사용하는 템플릿 언어</p>
+      </li>
+    </ul>
+  </li>
+  <li>Object
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">나의 블로그</code></li>
+    </ul>
+  </li>
+  <li>Tag
+    <ul>
+      <li>
+        <pre><code class="language-Liquid">    
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>Filter
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Hi</code>
+        <h3 id="front-matter">Front Matter</h3>
+        <p>문서의 상단에 있는 두 개의 — 사이에 들어가는 YAML 조각</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <pre><code class="language-Liquid">---
+# Front Matter
+my_number: 5
+---
+  
+</code></pre>
+    <h3 id="layouts">Layouts</h3>
+    <ul>
+      <li>_layouts\default.html 제작</li>
+      <li>
+        <div class="post-header">
+</div>
+      </li>
+    </ul>
+    <h1 class="post-title-main"></h1>
+  </li>
+</ul>
+<p>&lt;/div&gt;</p>
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+
+
+    
+
+
+    
+
+    <a target="_blank" rel="noopener" href="https://github.com/Dev9er/Dev9er.github.io/blob/main/pdfconfigs/tocpage.html" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+   <!-- new page -->
+<div id="navig">
+    <h1>Table of Contents</h1>
+
+    
+
+    <ul id="mysidebar" class="nav">
+        
+    </ul>
+</div>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<hr class="shaded" />
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2021 Copyright 2021 Dev9er' Blog. All rights reserved. <br />
+ Site last generated: Aug 27, 2021 <br />
+<p><img src="images/company_logo.png" alt="Company logo" /></p>
+                </div>
+            </div>
+</footer>
+
+<p>는 호출된 페이지의 렌더링된 콘텐츠 값을 갖는 특수 변수</p>
+<ul>
+  <li>index.html에 <code class="language-plaintext highlighter-rouge">layout: default</code> 추가</li>
+  <li>about.md에 layout 적용해 보기
+    <h3 id="includes">Includes</h3>
+  </li>
+  <li>_includes\navigation.html 제작</li>
+  <li>default layout에 적용해 보기
+    <h3 id="data-files">Data Files</h3>
+  </li>
+  <li>Jekyll은 _data 디렉토리에 위치한 YAML, JSON, CSV 파일로부터 데이터를 가져오는 것을 지원한다.</li>
+  <li>데이터 파일은 콘텐츠를 소스코드로부터 분리하여 사이트를 관리하기 쉽게 만들어주는 좋은 방법이다.</li>
+  <li>새로운 콘텐츠를 추가하거나 변경할 때 편리.</li>
+  <li>네비게이션의 콘텐츠를 데이터 파일로 보관하고, 네비게이션에 포함된 것들을 반복문을 이용해 사용해 보기
+    <ul>
+      <li>_data\navigation.yml 제작</li>
+      <li>navigation.yml에 있는 각각의 이름과 링크 쌍을 배열로 보관하여 사용</li>
+      <li>
+        <h3 id="assets">Assets</h3>
+      </li>
+    </ul>
+  </li>
+  <li>Jekyll에서는 CSS, JS, 이미지, 다른 asset들을 직접적으로 사용할 수 있다.</li>
+  <li>그것들을 Assets site 폴더에 넣으면 빌드된 사이트로 복사된다.</li>
+  <li>_includes/navigation.html 에 사용된 인라인 스타일은 좋은 방법이 아니다.
+    <ul>
+      <li>스타일을 클래스로 지정하는 방법으로 바꿔 본다.</li>
+      <li>표준 CSS를 사용하는 것도 가능하지만 Sass를 이용한다.</li>
+      <li>Sass는 Jekyll에 CSS를 바로 올릴 수 있는 환상적인 확장이다.</li>
+      <li>assets\css\styles.scss 작성 =&gt; _site\assets\css\styles.css로 복사됨</li>
+      <li>_sass\main.css 작성</li>
+      <li>default.html 에서 사용
+        <ul>
+          <li>
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="/assets/css/styles.css" /&gt;
+</code></pre></div>            </div>
+            <h3 id="blogging">Blogging</h3>
+            <p>Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하는 것이 가능하다.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>블로그 포스트는 _posts 라는 폴더에 있다.</li>
+  <li>포스트의 파일명은 특별한 포맷을 가지는데 발행일, 제목, 확장자 이다.</li>
+  <li>첫 포스트를 _posts\2021-08-27-Test.md로 제작해 보기</li>
+  <li>post layout 제작</li>
+  <li>Jekyll에서는 포스트들을 site.posts 로 접근할 수 있다.</li>
+  <li>blog.html을 루트 디렉토리에 제작하여 posts 관리</li>
+  <li>_data\navigation.yml에 blog 엔트리 추가
+    <h3 id="collections">Collections</h3>
+    <p>만약에 블로그의 저자들 각각을 위한 간단한 소개말과 그들의 포스트들을 볼 수 있는 저자들만의 페이지를 만들고 싶다면 어떻게 해야할까?
+컬렉션은 콘텐츠를 날짜별로 그룹화하지 않아도 된다는 점을 제외하면 포스트와 유사하다.</p>
+  </li>
+  <li>컬렉션을 만들기 위해서 Jekyll에게 _config.yml 을 통해 알려주어야 한다.
+    <ul>
+      <li>먼저 _config.yml 파일을 만든다.</li>
+      <li>_config.yml 파일을 수정한 후에 변경사항을 반영하기 위해서는 Jekyll 서버를 재시작해야 한다.</li>
+    </ul>
+  </li>
+  <li>컬렉션에 있는 아이템들(문서들)은 루트 디렉토리에 있는 _<em>collection_name</em> 디렉토리에 만들면 된다.
+    <ul>
+      <li>저자를 기준으로 컬렉션을 만들기 위해서는 _authors 로 만들면 적절할 것이다.</li>
+    </ul>
+  </li>
+  <li>저자에 관한 문서들을 만들어보자.
+    <ul>
+      <li>_authors\jill.md 등</li>
+    </ul>
+  </li>
+  <li>모든 저자들을 리스트해서 보여주는 페이지를 추가해보자.
+    <ul>
+      <li>Jekyll은 컬렉션을 site.authors 변수를 통해 이용할 수 있도록 해준다.</li>
+      <li>루트 디렉토리에 staff.html 을 만든다.</li>
+    </ul>
+  </li>
+  <li>_data/navigation.yml 에 추가</li>
+  <li>기본적으로 컬렉션은 문서의 페이지를 출력하지 않는다.
+    <ul>
+      <li>만약 각 저자 마다 페이지를 만들어주고 싶다면 _config.yml 파일을 살짝 수정해야 한다.</li>
+      <li>output: true 추가</li>
+    </ul>
+  </li>
+  <li>staff.html에 링크 추가</li>
+  <li>post와 같이 authors를 위한 layout을 만든다.
+    <ul>
+      <li>_layouts/author.html 제작</li>
+      <li>이렇게 만든 author 레이아웃을 author들, jill.md 와 ted.md 의 front matter에 표시해주어야 하지만 이것은 계속 반복되는 작업이다. 따라서 다른 방법을 사용해볼 수 있다.
+        <ul>
+          <li>우리가 원하는 것은 자동적으로 포스트들은 post 레이아웃을 사용하고, author들은 author 레이아웃을 사용하는 것이다.</li>
+          <li>_config.yml에 front matter default를 적용
+            <ul>
+              <li>기본값을 적용할 scope 를 정하고, 기본값으로 들어갈 front matter를 넣으면 된다.</li>
+            </ul>
+          </li>
+          <li>이제 모든 page 들과 post 들의 front matter에서 layout 에 관한 부분을 다 지워도 된다.</li>
+        </ul>
+      </li>
+      <li>List author’s posts
+        <ul>
+          <li>각 author가 쓴 포스트들을 그들의 페이지에 필터링해서 보여주기.</li>
+          <li>author의 short_name 과 post의 author 가 매치될 필요가 있다.</li>
+        </ul>
+      </li>
+      <li>Link to authors page
+        <ul>
+          <li>각각의 포스트는 author의 페이지로 갈 수 있는 링크를 가져야할 것이다.</li>
+          <li>위에서 한 것과 비슷한 필터링 기술을 사용해서 할 수 있다.
+            <ul>
+              <li>layouts/post.html 수정
+                <h3 id="배포">배포</h3>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Gemfile을 루트 디렉토리에 만든다.
+    <ul>
+      <li>source ‘https://rubygems.org’</li>
+      <li>gem ‘jekyll’</li>
+    </ul>
+  </li>
+  <li>bundle install 실행 =&gt; Gemfile.lock 생성</li>
+  <li>bundle exec jekyll serve</li>
+  <li>플러그인
+    <ul>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :jekyll_plugins do
+  gem 'jekyll-sitemap'
+  gem 'jekyll-feed'
+  gem 'jekyll-seo-tag'
+end
+</code></pre></div>        </div>
+      </li>
+      <li>_config.yml 에도 추가
+        <ul>
+          <li>```
+plugins:
+            <ul>
+              <li>jekyll-feed</li>
+              <li>jekyll-sitemap</li>
+              <li>jekyll-seo-tag
+```</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>bundle update 실행
+-jekyll-feed 와 jekyll-seo-tag 를 사용하기 위해서는 _layouts/default.html 에 따로 태그를 추가해 주어야 한다.
+    <ul>
+      <li>bundle exec jekyll serve</li>
+    </ul>
+  </li>
+  <li>Environments
+    <ul>
+      <li>때때로 사이트를 만들었을 때는 결과를 표시하고 싶지만, 개발 중일 때는 표시하지 않고 싶을 수 있다. disqus 또는 Google Analytics 등이 그러한데, 이것을 위해서는 environments를 사용할 수 있다.</li>
+      <li>JEKYLL_ENV 라는 환경 변수를 사용한다.
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production bundle exec jekyll build</code></li>
+          <li>
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      
+&lt;script src="my-analytics-script.js"&gt;&lt;/script&gt;
+      
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>서버에 배포
+    <ul>
+      <li>JEKYLL_ENV=production bundle exec jekyll build</li>
+      <li>이후 _site 디렉토리의 콘텐츠를 복사해 서버로 제공한다.
+        <ul>
+          <li><a href="https://jekyllrb.com/docs/continuous-integration/github-actions/">Github Actions</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="jekyll-theme-사용">Jekyll Theme 사용</h2>
+<ul>
+  <li><a href="https://github.com/tomjoht/documentation-theme-jekyll">원본 Theme</a></li>
+  <li>Clone: __documentation-theme-jekyll</li>
+  <li><a href="https://Dev9er.github.io">GitHub Page Source</a>
+    <ul>
+      <li>main branch 사용</li>
+    </ul>
+  </li>
+  <li><a href="https://Dev9er.github.io/gh-pages">Target GitHub Page</a>
+    <h3 id="설치">설치</h3>
+  </li>
+  <li>git submodule 사용</li>
+  <li>git submodule add https://github.com/tomjoht/documentation-theme-jekyll __document-theme-jekyll</li>
+  <li>작업 시, Submodule 포함 clone 방법
+    <ul>
+      <li>git clone –recurse-submodules https://github.com/Dev9er/Dev9er.github.io</li>
+      <li>Submodule Update
+        <ul>
+          <li>git submodule update –remote</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>__document-theme-jekyll 파일 복사 후, Compile
+    <ul>
+      <li>bundle update</li>
+      <li>bundle add webrick</li>
+      <li>bundle exec jekyll serve
+        <h3 id="수정">수정</h3>
+      </li>
+    </ul>
+  </li>
+  <li>기본 화면 완성</li>
+</ul>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2021 Copyright 2021 Dev9er' Blog. All rights reserved. <br />
+ Site last generated: Aug 27, 2021 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+
+
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>
+
+
